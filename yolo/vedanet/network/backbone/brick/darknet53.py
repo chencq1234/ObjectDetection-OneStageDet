@@ -63,6 +63,7 @@ class Transition(nn.Module):
         half_nchannels = int(nchannels/2)
         layers = [
                 vn_layer.Conv2dBatchLeaky(nchannels, half_nchannels, 1, 1),
+                # nn.functional.upsample(scale_factor=2)
                 nn.Upsample(scale_factor=2)
                 ]
 

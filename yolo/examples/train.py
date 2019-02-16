@@ -14,7 +14,9 @@ sys.path.insert(0, '.')
 import brambox.boxes as bbb
 import vedanet as vn
 from utils.envs import initEnv, randomSeeding
-
+import os
+os.environ["CUDA_DEVICE_ORDER"]="PCI_BUS_ID"
+os.environ["CUDA_VISIBLE_DEVICES"]="0,1,2,3"
 
 if __name__ == '__main__':
 
